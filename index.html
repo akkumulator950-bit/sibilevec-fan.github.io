@@ -16,70 +16,27 @@
     <meta property="og:description" content="Все ресурсы проекта Сибилевец в одном месте: официальный сайт, видео, статьи, сообщество">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/">
-    <meta property="og:image" content="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/images/og-image.png">
     <meta property="og:locale" content="ru_RU">
     
     <!-- Twitter Card метатеги -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Каталог ссылок: Сибилевец — упрощенный русский язык">
     <meta name="twitter:description" content="Полный каталог всех ресурсов проекта Сибилевец">
-    <meta name="twitter:image" content="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/images/twitter-image.png">
     
     <!-- Дополнительные метатеги -->
     <meta name="author" content="Алёна Рыжова">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="revisit-after" content="7 days">
     <meta name="language" content="Russian">
-    <meta name="geo.region" content="RU">
-    <meta name="geo.placename" content="Russia">
     
     <!-- Каноническая ссылка -->
     <link rel="canonical" href="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/">
-    
-    <!-- Фавиконки -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Метатеги для мобильных устройств -->
-    <meta name="theme-color" content="#1a365d">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Каталог Сибилевец">
-    
-    <!-- Метатеги для браузеров Microsoft -->
-    <meta name="msapplication-TileColor" content="#1a365d">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    
-    <!-- Структурированные данные Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Каталог ссылок проекта Сибилевец",
-        "description": "Полный каталог всех ресурсов проекта Сибилевец — упрощённого варианта русского языка",
-        "url": "https://akkumulator950-bit.github.io/sibilevec-fan.github.io/",
-        "author": {
-            "@type": "Person",
-            "name": "Алёна Рыжова",
-            "birthDate": "2010-06-21"
-        },
-        "about": {
-            "@type": "CreativeWork",
-            "name": "Сибилевец",
-            "description": "Упрощённый вариант русского языка с 3 правилами грамматики и 26 буквами"
-        },
-        "datePublished": "2025-10-15",
-        "inLanguage": "ru"
-    }
-    </script>
     
     <!-- Стили и шрифты -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        /* Базовые стили и сброс */
         * {
             margin: 0;
             padding: 0;
@@ -87,20 +44,17 @@
         }
 
         :root {
-            --primary: #1a365d;
-            --secondary: #2d6a9c;
-            --accent: #38b2ac;
+            --primary: #23415b;
+            --secondary: #3ea9bf;
+            --accent: #2c8ba3;
             --text: #2d3748;
             --text-light: #718096;
-            --background: #f8fafc;
-            --surface: #ffffff;
+            --background: #ffffff;
+            --surface: #f7fafc;
             --border: #e2e8f0;
             --success: #48bb78;
+            --error: #f56565;
             --warning: #ed8936;
-            --danger: #f56565;
-            --info: #4299e1;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         body {
@@ -108,322 +62,328 @@
             line-height: 1.6;
             color: var(--text);
             background: var(--background);
-            min-height: 100vh;
+            font-weight: 400;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
-        /* Шапка */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: var(--shadow);
+        /* Навигация */
+        .main-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
-        .header-content {
+        .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
+            padding: 1rem 0;
         }
 
-        .logo-section {
+        .nav-brand {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .brand-name {
             font-size: 1.5rem;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
             font-weight: 700;
-            line-height: 1.2;
+            color: var(--primary);
         }
 
-        .logo-text p {
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
             opacity: 0.9;
-            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .stats {
+        .hero-stats {
             display: flex;
-            gap: 1.5rem;
+            justify-content: center;
+            gap: 4rem;
             flex-wrap: wrap;
         }
 
-        .stat-item {
+        .stat {
             text-align: center;
         }
 
         .stat-number {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            font-size: 0.8rem;
-            opacity: 0.9;
+            font-size: 0.9rem;
+            opacity: 0.8;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* Основной контент */
-        main {
-            padding: 3rem 0;
+        /* Секции */
+        .section {
+            padding: 5rem 0;
         }
 
-        .intro-section {
-            background: var(--surface);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--accent);
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        .intro-section h2 {
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
             color: var(--primary);
             margin-bottom: 1rem;
-            font-size: 1.8rem;
         }
 
-        .intro-section p {
+        .section-subtitle {
+            font-size: 1.125rem;
             color: var(--text-light);
-            margin-bottom: 1.5rem;
-            max-width: 800px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-card {
-            background: var(--background);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .highlight-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .highlight-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Секции ссылок */
-        .sections-container {
+        /* Карточки с ссылками */
+        .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
 
-        .section-card {
+        .link-card {
             background: var(--surface);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
         }
 
-        .section-card:hover {
+        .link-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--secondary);
         }
 
-        .section-header {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .section-icon {
-            font-size: 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .links-list {
-            padding: 1.5rem;
-        }
-
-        .link-item {
-            margin-bottom: 1.2rem;
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .link-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .link-title {
-            font-weight: 600;
+        .link-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             color: var(--primary);
-            margin-bottom: 0.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        }
+
+        .link-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .link-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .link-url {
             color: var(--text-light);
             font-size: 0.9rem;
             font-family: 'Roboto Mono', monospace;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
             word-break: break-all;
-        }
-
-        .link-description {
-            color: var(--text);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            background: var(--background);
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
         }
 
         .link-meta {
             display: flex;
             gap: 1rem;
-            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
             font-size: 0.85rem;
             color: var(--text-light);
+            flex-wrap: wrap;
         }
 
         .link-tag {
             background: var(--background);
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             font-size: 0.75rem;
-            color: var(--secondary);
+            font-weight: 500;
             border: 1px solid var(--border);
         }
 
+        .tag-official {
+            background: rgba(72, 187, 120, 0.1);
+            color: var(--success);
+            border-color: rgba(72, 187, 120, 0.3);
+        }
+
+        .tag-media {
+            background: rgba(237, 137, 54, 0.1);
+            color: var(--warning);
+            border-color: rgba(237, 137, 54, 0.3);
+        }
+
+        .tag-learning {
+            background: rgba(66, 153, 225, 0.1);
+            color: #4299e1;
+            border-color: rgba(66, 153, 225, 0.3);
+        }
+
+        .tag-community {
+            background: rgba(159, 122, 234, 0.1);
+            color: #9f7aea;
+            border-color: rgba(159, 122, 234, 0.3);
+        }
+
+        .tag-petition {
+            background: rgba(245, 101, 101, 0.1);
+            color: var(--error);
+            border-color: rgba(245, 101, 101, 0.3);
+        }
+
+        /* Кнопки */
         .link-button {
-            display: inline-block;
             background: var(--secondary);
             color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
+            border: none;
+            padding: 0.875rem 1.75rem;
             border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: background 0.3s ease;
-            margin-top: 0.5rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            justify-content: center;
         }
 
         .link-button:hover {
-            background: var(--primary);
+            background: var(--accent);
         }
 
-        .link-button i {
-            margin-right: 0.3rem;
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
         }
 
-        /* Информация об авторе каталога */
+        .button-group .link-button {
+            width: auto;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .button-outline {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .button-outline:hover {
+            background: rgba(62, 169, 191, 0.1);
+        }
+
+        /* Информация об авторе */
         .author-section {
             background: var(--surface);
             border-radius: 16px;
+            padding: 3rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .author-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .author-card {
+            background: var(--background);
             padding: 2rem;
-            margin-top: 3rem;
-            box-shadow: var(--shadow);
+            border-radius: 12px;
+            border: 1px solid var(--border);
             text-align: center;
         }
 
-        .author-section h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .author-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .author-detail {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
         .author-icon {
-            width: 48px;
-            height: 48px;
+            width: 60px;
+            height: 60px;
             background: var(--accent);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
         }
 
         .author-label {
             font-weight: 600;
             color: var(--primary);
+            margin-bottom: 0.5rem;
         }
 
         .author-value {
             color: var(--text);
+            font-size: 1.1rem;
         }
 
-        /* Подвал */
-        footer {
+        /* Футер */
+        .main-footer {
             background: var(--primary);
             color: white;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            padding: 3rem 0;
         }
 
         .footer-content {
@@ -431,17 +391,39 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
-        .footer-text {
-            opacity: 0.9;
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .footer-subtitle {
+            opacity: 0.8;
             font-size: 0.9rem;
         }
 
         .footer-links {
             display: flex;
             gap: 1.5rem;
+            align-items: center;
         }
 
         .footer-links a {
@@ -457,362 +439,486 @@
 
         /* Адаптивность */
         @media (max-width: 768px) {
-            .header-content {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .navbar {
                 flex-direction: column;
-                text-align: center;
+                gap: 1rem;
             }
-            
-            .logo-section {
-                flex-direction: column;
-                text-align: center;
+
+            .hero-title {
+                font-size: 2.5rem;
             }
-            
-            .stats {
-                justify-content: center;
+
+            .hero-stats {
+                gap: 2rem;
             }
-            
-            .sections-container {
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .links-grid {
                 grid-template-columns: 1fr;
             }
-            
+
+            .link-card {
+                padding: 2rem;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .intro-section {
-                padding: 1.5rem;
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group .link-button {
+                width: 100%;
             }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
+            .hero-title {
+                font-size: 2rem;
             }
-            
-            .highlight-card, .author-section {
-                padding: 1.2rem;
-            }
-            
-            .section-header {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
-            }
-            
+
             .stat-number {
-                font-size: 1.5rem;
+                font-size: 2rem;
+            }
+
+            .link-card {
+                padding: 1.5rem;
+            }
+
+            .author-section {
+                padding: 2rem 1.5rem;
             }
         }
 
-        /* Дополнительные стили */
-        .tag-official {
-            background: rgba(72, 187, 120, 0.1);
-            color: var(--success);
-            border-color: rgba(72, 187, 120, 0.3);
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
         }
 
-        .tag-community {
-            background: rgba(66, 153, 225, 0.1);
-            color: var(--info);
-            border-color: rgba(66, 153, 225, 0.3);
-        }
-
-        .tag-media {
-            background: rgba(237, 137, 54, 0.1);
-            color: var(--warning);
-            border-color: rgba(237, 137, 54, 0.3);
-        }
-
-        .tag-petition {
-            background: rgba(245, 101, 101, 0.1);
-            color: var(--danger);
-            border-color: rgba(245, 101, 101, 0.3);
-        }
-
+        /* Утилиты */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
         .separator {
             height: 1px;
             background: var(--border);
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
     </style>
 </head>
 <body>
-    <!-- Шапка -->
-    <header>
+    <!-- Навигация -->
+    <header class="main-header">
         <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
+            <nav class="navbar">
+                <div class="nav-brand">
                     <div class="logo-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <div class="logo-text">
-                        <h1>Каталог ссылок: Сибилевец</h1>
-                        <p>Упрощённый вариант русского языка • Все ресурсы в одном месте</p>
+                    <div>
+                        <div class="brand-name">Каталог Сибилевец</div>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Все ресурсы проекта</div>
                     </div>
                 </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Ресурсов</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Правила</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">26</span>
-                        <span class="stat-label">Буквы</span>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Основной контент -->
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Полный каталог ресурсов Сибилевца</h1>
+            <p class="hero-subtitle">Упрощённый вариант русского языка с 3 правилами грамматики и 26 буквами. Все ссылки в одном месте.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Ресурсов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Правила</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Буквы</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5 мин</div>
+                    <div class="stat-label">На изучение</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основное содержание -->
     <main class="container">
         <!-- Введение -->
-        <section class="intro-section">
-            <h2>Что такое Сибилевец?</h2>
-            <p>Сибилевец — это упрощённый вариант русского языка, созданный для лёгкого общения. Он сохраняет основу русского, но убирает сложные грамматические правила. Проект разработан 15-летним школьником Тимофеем Сибилевым в 2025 году.</p>
-            
-            <div class="highlights">
-                <div class="highlight-card">
-                    <h3><i class="fas fa-bolt"></i> Быстрое изучение</h3>
-                    <p>Всего 3 основных правила грамматики, которые можно выучить за 5 минут.</p>
-                </div>
-                <div class="highlight-card">
-                    <h3><i class="fas fa-font"></i> Упрощённый алфавит</h3>
-                    <p>26 букв вместо 33. Убраны сложные и редко используемые символы.</p>
-                </div>
-                <div class="highlight-card">
-                    <h3><i class="fas fa-users"></i> Открытый проект</h3>
-                    <p>Язык с открытым исходным кодом, развиваемый сообществом.</p>
-                </div>
+        <section class="section">
+            <div class="section-header">
+                <h2>Что такое Сибилевец?</h2>
+                <p class="section-subtitle">Сибилевец — это упрощённый вариант русского языка, созданный для лёгкого общения. Проект разработан 15-летним школьником Тимофеем Сибилевым в 2025 году.</p>
             </div>
         </section>
 
-        <!-- Основные разделы -->
-        <div class="sections-container">
-            <!-- Официальные ресурсы -->
-            <div class="section-card">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i class="fas fa-home"></i>
+        <!-- Официальные ресурсы -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-home"></i> Официальные ресурсы</h2>
+                <p class="section-subtitle">Основные сайты и каналы проекта, созданные автором</p>
+            </div>
+
+            <div class="links-grid">
+                <!-- Официальный сайт -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <div class="section-title">Официальные ресурсы</div>
-                </div>
-                <div class="links-list">
-                    <div class="link-item">
-                        <div class="link-title">
-                            Официальный сайт
-                            <span class="link-tag tag-official">Официальный</span>
-                        </div>
-                        <div class="link-url">https://timoshamoscow.github.io/sibylevec-site.github.io/</div>
-                        <div class="link-description">Основной сайт проекта с описанием языка, грамматикой, упражнениями и словарём.</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-calendar"></i> Актуально</span>
-                            <span><i class="fas fa-star"></i> Основной ресурс</span>
-                        </div>
+                    <h3>Официальный сайт</h3>
+                    <p class="link-description">Основной сайт проекта с полным описанием языка, грамматикой, упражнениями и интерактивным словарём.</p>
+                    
+                    <div class="link-url">https://timoshamoscow.github.io/sibylevec-site.github.io/</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="far fa-calendar"></i> Актуально</span>
+                        <span><i class="fas fa-star"></i> Основной ресурс</span>
+                        <span class="link-tag tag-official">Официальный</span>
+                    </div>
+                    
+                    <div class="button-group">
                         <a href="https://timoshamoscow.github.io/sibylevec-site.github.io/" target="_blank" class="link-button">
                             <i class="fas fa-external-link-alt"></i> Перейти на сайт
                         </a>
                     </div>
+                </div>
+
+                <!-- Telegram-канал -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram-канал</h3>
+                    <p class="link-description">Основной канал для общения, новостей проекта, обсуждений с создателем и участниками сообщества.</p>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            Telegram-канал
-                            <span class="link-tag tag-official">Официальный</span>
-                        </div>
-                        <div class="link-url">https://t.me/Sibylevec</div>
-                        <div class="link-description">Основной канал для общения, новостей проекта и обсуждений с создателем.</div>
-                        <div class="link-meta">
-                            <span><i class="fas fa-user-friends"></i> Сообщество</span>
-                            <span><i class="fas fa-bullhorn"></i> Новости</span>
-                        </div>
-                        <a href="https://t.me/Sibylevec" target="_blank" class="link-button">
-                            <i class="fab fa-telegram"></i> Перейти в Telegram
-                        </a>
+                    <div class="link-url">https://t.me/Sibylevec</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="fas fa-user-friends"></i> Сообщество</span>
+                        <span><i class="fas fa-bullhorn"></i> Новости</span>
+                        <span class="link-tag tag-official">Официальный</span>
+                        <span class="link-tag tag-community">Сообщество</span>
                     </div>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            Fandom Вики
-                            <span class="link-tag tag-official">Официальный</span>
-                        </div>
-                        <div class="link-url">https://sibilevets.fandom.com/wiki/Сибилевец_Wiki</div>
-                        <div class="link-description">Официальная вики-энциклопедия проекта с подробной информацией о языке.</div>
-                        <div class="link-meta">
-                            <span><i class="fas fa-book"></i> Энциклопедия</span>
-                            <span><i class="fas fa-info-circle"></i> Подробности</span>
-                        </div>
+                    <div class="button-group">
+                        <a href="https://t.me/Sibylevec" target="_blank" class="link-button">
+                            <i class="fab fa-telegram"></i> Telegram канал
+                        </a>
+                        <a href="https://t.me/setlanguage/sybilevec" target="_blank" class="link-button button-outline">
+                            <i class="fas fa-language"></i> Язык в Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fandom Вики -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-wikipedia-w"></i>
+                    </div>
+                    <h3>Fandom Вики</h3>
+                    <p class="link-description">Официальная вики-энциклопедия проекта с подробной информацией о языке, правилах, истории создания.</p>
+                    
+                    <div class="link-url">https://sibilevets.fandom.com/wiki/Сибилевец_Wiki</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="fas fa-book"></i> Энциклопедия</span>
+                        <span><i class="fas fa-info-circle"></i> Подробности</span>
+                        <span class="link-tag tag-official">Официальный</span>
+                    </div>
+                    
+                    <div class="button-group">
                         <a href="https://sibilevets.fandom.com/wiki/Сибилевец_Wiki" target="_blank" class="link-button">
                             <i class="fab fa-wikipedia-w"></i> Открыть вики
                         </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Видео и обучающие материалы -->
-            <div class="section-card">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i class="fas fa-video"></i>
+        <div class="separator"></div>
+
+        <!-- Видео и обучение -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-video"></i> Видео и обучение</h2>
+                <p class="section-subtitle">Обучающие материалы, видеоуроки и ресурсы для изучения языка</p>
+            </div>
+
+            <div class="links-grid">
+                <!-- YouTube-канал -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
                     </div>
-                    <div class="section-title">Видео и обучение</div>
-                </div>
-                <div class="links-list">
-                    <div class="link-item">
-                        <div class="link-title">
-                            YouTube-канал
-                            <span class="link-tag tag-official">Официальный</span>
-                        </div>
-                        <div class="link-url">https://www.youtube.com/@Sybilevec</div>
-                        <div class="link-description">Официальный YouTube-канал с уроками, объяснениями правил и видео о языке.</div>
-                        <div class="link-meta">
-                            <span><i class="fas fa-users"></i> 3 подписчика</span>
-                            <span><i class="fas fa-eye"></i> 5.7K просмотров</span>
-                        </div>
+                    <h3>YouTube-канал</h3>
+                    <p class="link-description">Официальный YouTube-канал с уроками, объяснениями правил, демонстрациями и видео о разработке языка.</p>
+                    
+                    <div class="link-url">https://www.youtube.com/@Sybilevec</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="fas fa-users"></i> 3 подписчика</span>
+                        <span><i class="fas fa-eye"></i> 5.7K просмотров</span>
+                        <span><i class="fas fa-video"></i> 10 видео</span>
+                        <span class="link-tag tag-official">Официальный</span>
+                        <span class="link-tag tag-learning">Обучение</span>
+                    </div>
+                    
+                    <div class="button-group">
                         <a href="https://www.youtube.com/@Sybilevec" target="_blank" class="link-button">
-                            <i class="fab fa-youtube"></i> Смотреть видео
+                            <i class="fab fa-youtube"></i> YouTube канал
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=lY-d2Owop4I" target="_blank" class="link-button button-outline">
+                            <i class="fas fa-music"></i> Песня о проекте
                         </a>
                     </div>
+                </div>
+
+                <!-- Основное видео -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>"Я создал русский язык 2.0"</h3>
+                    <p class="link-description">Основное видео с объяснением концепции языка, его правил и особенностей. Набрало более 680 просмотров.</p>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            "Я создал русский язык 2.0"
-                            <span class="link-tag">Видео</span>
-                        </div>
-                        <div class="link-url">YouTube: Я создал русский язык 2.0. Вот как он работает</div>
-                        <div class="link-description">Основное видео с объяснением концепции языка, набравшее более 680 просмотров.</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-clock"></i> 3 месяца назад</span>
-                            <span><i class="fas fa-eye"></i> 680+ просмотров</span>
-                        </div>
+                    <div class="link-meta">
+                        <span><i class="far fa-clock"></i> 3 месяца назад</span>
+                        <span><i class="fas fa-eye"></i> 680+ просмотров</span>
+                        <span><i class="fas fa-film"></i> Основное видео</span>
+                        <span class="link-tag tag-learning">Обучение</span>
                     </div>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            Сибилевец | Базовый словарь
-                            <span class="link-tag">Обучение</span>
-                        </div>
-                        <div class="link-url">https://quizlet.com/ru/1077244205/%D1%81%D0%B8%D0%B1%D0%B8%D0%BB%D0%B5%D0%B2%D0%B5%D1%86-%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C-%D1%83%D1%80%D0%BE%D0%BA-1-flash-cards/</div>
-                        <div class="link-description">Обучающие карточки с базовым словарём языка на платформе Quizlet.</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-calendar"></i> 25 сент. 2025</span>
-                            <span><i class="fas fa-graduation-cap"></i> Обучение</span>
-                        </div>
+                    <div class="button-group">
+                        <a href="https://www.youtube.com/@Sybilevec" target="_blank" class="link-button">
+                            <i class="fas fa-play"></i> Смотреть видео
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quizlet -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Базовый словарь на Quizlet</h3>
+                    <p class="link-description">Обучающие карточки с базовым словарём языка на платформе Quizlet для быстрого запоминания слов.</p>
+                    
+                    <div class="link-url">https://quizlet.com/ru/1077244205/сибилевец-базовый-словарь-урок-1</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="far fa-calendar"></i> 25 сент. 2025</span>
+                        <span><i class="fas fa-flashcards"></i> Карточки</span>
+                        <span><i class="fas fa-book"></i> Словарь</span>
+                        <span class="link-tag tag-learning">Обучение</span>
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="https://quizlet.com/ru/1077244205/сибилевец-базовый-словарь-урок-1" target="_blank" class="link-button">
+                            <i class="fas fa-external-link-alt"></i> Открыть Quizlet
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Второй ряд разделов -->
-        <div class="sections-container">
-            <!-- Публикации в СМИ -->
-            <div class="section-card">
-                <div class="section-header">
-                    <div class="section-icon">
+        <div class="separator"></div>
+
+        <!-- Публикации в СМИ -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Публикации в СМИ</h2>
+                <p class="section-subtitle">Статьи и публикации о проекте в различных медиа</p>
+            </div>
+
+            <div class="links-grid">
+                <!-- VC.ru -->
+                <div class="link-card">
+                    <div class="link-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
-                    <div class="section-title">Публикации в СМИ</div>
-                </div>
-                <div class="links-list">
-                    <div class="link-item">
-                        <div class="link-title">
-                            VC.ru: "Школьник создал свой язык"
-                            <span class="link-tag tag-media">СМИ</span>
-                        </div>
-                        <div class="link-url">https://vc.ru/2250506-shkolnik-sozdal-yazyk-sibilevec</div>
-                        <div class="link-description">Статья на бизнес-портале VC.ru о создании языка школьником.</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-calendar"></i> 2 окт. 2025</span>
-                            <span><i class="fas fa-newspaper"></i> Новостная статья</span>
-                        </div>
+                    <h3>VC.ru: "Школьник создал свой язык"</h3>
+                    <p class="link-description">Статья на бизнес-портале VC.ru о создании языка школьником, его особенностях и целях проекта.</p>
+                    
+                    <div class="link-url">https://vc.ru/2250506-shkolnik-sozdal-yazyk-sibilevec</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="far fa-calendar"></i> 2 окт. 2025</span>
+                        <span><i class="fas fa-newspaper"></i> Новостная статья</span>
+                        <span class="link-tag tag-media">СМИ</span>
+                    </div>
+                    
+                    <div class="button-group">
                         <a href="https://vc.ru/2250506-shkolnik-sozdal-yazyk-sibilevec" target="_blank" class="link-button">
                             <i class="fas fa-external-link-alt"></i> Читать статью
                         </a>
                     </div>
+                </div>
+
+                <!-- DTF -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>DTF: "Создание упрощённого языка"</h3>
+                    <p class="link-description">Пост на платформе DTF от создателя языка с подробным описанием проекта, его целей и технической реализации.</p>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            DTF: "Создание упрощённого языка"
-                            <span class="link-tag tag-media">Платформа</span>
-                        </div>
-                        <div class="link-url">https://dtf.ru/craft/4058633-sozdanie-uproshchennogo-yazyka-sibilevets</div>
-                        <div class="link-description">Пост на платформе DTF от создателя языка с подробным описанием проекта.</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-calendar"></i> 30 сент. 2025</span>
-                            <span><i class="fas fa-user-edit"></i> Пост автора</span>
-                        </div>
+                    <div class="link-url">https://dtf.ru/craft/4058633-sozdanie-uproshchennogo-yazyka-sibilevets</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="far fa-calendar"></i> 30 сент. 2025</span>
+                        <span><i class="fas fa-user-edit"></i> Пост автора</span>
+                        <span class="link-tag tag-media">Платформа</span>
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="https://dtf.ru/craft/4058633-sozdanie-uproshchennogo-yazyka-sibilevets" target="_blank" class="link-button">
+                            <i class="fas fa-external-link-alt"></i> Читать на DTF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Блог "Ваш Единственный Друг" -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Блог "Ваш Единственный Друг"</h3>
+                    <p class="link-description">Публикация в блоге о создании языка школьником, его инновационном подходе к упрощению русского языка.</p>
+                    
+                    <div class="link-meta">
+                        <span><i class="far fa-calendar"></i> 2 окт. 2025</span>
+                        <span><i class="fas fa-blog"></i> Блог-пост</span>
+                        <span class="link-tag tag-media">Блог</span>
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="https://vc.ru/2250506-shkolnik-sozdal-yazyk-sibilevec" target="_blank" class="link-button">
+                            <i class="fas fa-external-link-alt"></i> Читать публикацию
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Сообщество и петиции -->
-            <div class="section-card">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i class="fas fa-hand-paper"></i>
+        <div class="separator"></div>
+
+        <!-- Сообщество и петиции -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Сообщество и петиции</h2>
+                <p class="section-subtitle">Активности сообщества, петиции и обсуждения</p>
+            </div>
+
+            <div class="links-grid">
+                <!-- Петиция в Duolingo -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-vote-yea"></i>
                     </div>
-                    <div class="section-title">Сообщество и петиции</div>
-                </div>
-                <div class="links-list">
-                    <div class="link-item">
-                        <div class="link-title">
-                            Петиция в Duolingo
-                            <span class="link-tag tag-petition">Петиция</span>
-                        </div>
-                        <div class="link-url">https://www.change.org/sibyleveconduolingo</div>
-                        <div class="link-description">Петиция с призывом добавить курс языка Сибилевец в приложение Duolingo.</div>
-                        <div class="link-meta">
-                            <span><i class="fas fa-signature"></i> 7 подписей</span>
-                            <span><i class="fas fa-bullseye"></i> Цель: 1000</span>
-                        </div>
+                    <h3>Петиция в Duolingo</h3>
+                    <p class="link-description">Петиция с призывом добавить курс языка Сибилевец в приложение Duolingo для доступности изучения.</p>
+                    
+                    <div class="link-url">https://www.change.org/sibyleveconduolingo</div>
+                    
+                    <div class="link-meta">
+                        <span><i class="fas fa-signature"></i> 7 подписей</span>
+                        <span><i class="fas fa-bullseye"></i> Цель: 1000</span>
+                        <span><i class="fas fa-graduation-cap"></i> Образование</span>
+                        <span class="link-tag tag-petition">Петиция</span>
+                        <span class="link-tag tag-community">Сообщество</span>
+                    </div>
+                    
+                    <div class="button-group">
                         <a href="https://www.change.org/sibyleveconduolingo" target="_blank" class="link-button">
                             <i class="fas fa-vote-yea"></i> Подписать петицию
                         </a>
                     </div>
+                </div>
+
+                <!-- Видео-ответы на вопросы -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>"Language of the Future or Just a Hobby?"</h3>
+                    <p class="link-description">Видео с ответами на вопросы о будущем языка, его перспективах и месте среди других языковых проектов.</p>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            "Sibilevets: Language of the Future..."
-                            <span class="link-tag">Видео</span>
-                        </div>
-                        <div class="link-url">YouTube: Sibilevets: Language of the Future or Just a Hobby?</div>
-                        <div class="link-description">Видео с ответами на вопросы о будущем языка (более 20 просмотров).</div>
-                        <div class="link-meta">
-                            <span><i class="far fa-clock"></i> 3 недели назад</span>
-                            <span><i class="fas fa-question-circle"></i> Вопрос-ответ</span>
-                        </div>
+                    <div class="link-meta">
+                        <span><i class="far fa-clock"></i> 3 недели назад</span>
+                        <span><i class="fas fa-eye"></i> 20+ просмотров</span>
+                        <span><i class="fas fa-question"></i> Вопрос-ответ</span>
+                        <span class="link-tag tag-learning">Обучение</span>
+                        <span class="link-tag tag-community">Сообщество</span>
                     </div>
                     
-                    <div class="link-item">
-                        <div class="link-title">
-                            Язык в Telegram
-                            <span class="link-tag tag-official">Официальный</span>
-                        </div>
-                        <div class="link-url">https://t.me/setlanguage/sybilevec</div>
-                        <div class="link-description">Файл локализации для использования языка Сибилевец в интерфейсе Telegram.</div>
-                        <div class="link-meta">
-                            <span><i class="fab fa-telegram"></i> Telegram</span>
-                            <span><i class="fas fa-language"></i> Локализация</span>
-                        </div>
+                    <div class="button-group">
+                        <a href="https://www.youtube.com/@Sybilevec" target="_blank" class="link-button">
+                            <i class="fab fa-youtube"></i> Смотреть видео
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Дополнительные ресурсы -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Дополнительные ресурсы</h3>
+                    <p class="link-description">Другие материалы и ссылки, связанные с проектом Сибилевец и его развитием.</p>
+                    
+                    <div class="link-meta">
+                        <span><i class="fas fa-external-link-alt"></i> Дополнительно</span>
+                        <span><i class="fas fa-code"></i> GitHub</span>
+                        <span class="link-tag tag-community">Ресурсы</span>
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="https://github.com/timoshamoscow" target="_blank" class="link-button">
+                            <i class="fab fa-github"></i> GitHub автора
+                        </a>
+                        <a href="https://dzen.ru/a/aNuoD3SDbGh3xoZW" target="_blank" class="link-button button-outline">
+                            <i class="fab fa-yandex"></i> Статья на Дзене
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Разделитель -->
-        <div class="separator"></div>
+        </section>
 
         <!-- Информация об авторе каталога -->
         <section class="author-section">
-            <h3><i class="fas fa-user-circle"></i> Об авторе этого каталога</h3>
-            <p>Этот каталог ссылок был составлен на основе открытых источников для систематизации информации о проекте "Сибилевец".</p>
+            <h2 class="text-center mb-2"><i class="fas fa-user-circle"></i> Об авторе этого каталога</h2>
+            <p class="text-center" style="color: var(--text-light); max-width: 800px; margin: 0 auto 2rem;">
+                Этот каталог ссылок был составлен на основе открытых источников для систематизации информации о проекте "Сибилевец". 
+                Все ссылки собраны из публичного доступа в декабре 2025 года.
+            </p>
             
-            <div class="author-info">
-                <div class="author-detail">
+            <div class="author-grid">
+                <div class="author-card">
                     <div class="author-icon">
                         <i class="fas fa-user"></i>
                     </div>
@@ -820,7 +926,7 @@
                     <div class="author-value">Алёна Рыжова</div>
                 </div>
                 
-                <div class="author-detail">
+                <div class="author-card">
                     <div class="author-icon">
                         <i class="fas fa-birthday-cake"></i>
                     </div>
@@ -828,81 +934,99 @@
                     <div class="author-value">21.06.2010</div>
                 </div>
                 
-                <div class="author-detail">
+                <div class="author-card">
                     <div class="author-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="author-label">Роль</div>
                     <div class="author-value">Исследователь проекта</div>
                 </div>
+                
+                <div class="author-card">
+                    <div class="author-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="author-label">Дата создания</div>
+                    <div class="author-value">Декабрь 2025</div>
+                </div>
             </div>
             
-            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-light);">
-                <i class="fas fa-info-circle"></i> Все ссылки собраны из открытых источников в декабре 2025 года.
-            </p>
+            <div class="text-center mt-2">
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    <i class="fas fa-info-circle"></i> Этот сайт является неофициальным каталогом ресурсов. Все права на оригинальный проект "Сибилевец" принадлежат его создателю — Тимофею Сибилеву.
+                </p>
+            </div>
         </section>
     </main>
 
-    <!-- Подвал -->
-    <footer>
+    <!-- Футер -->
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>© 2025 Каталог ссылок по проекту "Сибилевец". Все права на оригинальный проект принадлежат его создателю — Тимофею Сибилеву.</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Этот сайт является неофициальным каталогом ресурсов.</p>
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div>
+                        <div class="footer-title">Каталог Сибилевец</div>
+                        <div class="footer-subtitle">Все ресурсы проекта в одном месте</div>
+                    </div>
                 </div>
+                
                 <div class="footer-links">
-                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
                         <i class="fas fa-arrow-up"></i> Наверх
                     </a>
-                    <span>|</span>
-                    <a href="https://github.com/" target="_blank">
+                    <span style="opacity: 0.5;">|</span>
+                    <a href="https://github.com/akkumulator950-bit" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                 </div>
+            </div>
+            
+            <div class="text-center mt-2" style="opacity: 0.8; font-size: 0.9rem;">
+                <p>© 2025 Каталог ссылок по проекту "Сибилевец". Собрано с уважением к оригинальному проекту.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Простая функция для плавной прокрутки
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Интерактивность для кнопок
-        document.querySelectorAll('.link-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Добавляем анимацию нажатия
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-                
-                // Логируем переход (можно заменить на аналитику)
-                console.log('Переход по ссылке:', this.href);
-            });
-        });
-        
         // Обновление года в футере
         document.addEventListener('DOMContentLoaded', function() {
-            const yearElement = document.querySelector('.footer-text p');
+            const yearElement = document.querySelector('.main-footer p');
             if(yearElement) {
                 const currentYear = new Date().getFullYear();
                 yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
             }
+            
+            // Анимация кнопок
+            document.querySelectorAll('.link-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                    
+                    console.log('Переход по ссылке:', this.href);
+                });
+            });
+            
+            // Плавная прокрутка для всех внутренних ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>
